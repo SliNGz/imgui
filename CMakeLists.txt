@@ -8,8 +8,9 @@ include(${CMAKE_TOOLS_DIR}/Dependencies.cmake)
 
 # Sources
 file(GLOB_RECURSE SOURCES
-	 "include/*.h"
-	 "src/*.cpp")
+	 "include/imconfig.h" "include/imgui.h" "include/imgui_internal.h"
+	 "include/imstb_rectpack.h" "include/imstb_textedit.h" "include/imstb_truetype.h"
+	 "src/imgui.cpp" "src/imgui_demo.cpp" "src/imgui_draw.cpp" "src/imgui_tables.cpp" "src/imgui_widgets.cpp")
 
 # Target
 add_library(${PROJECT_NAME} STATIC ${SOURCES})
